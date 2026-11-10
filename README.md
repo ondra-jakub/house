@@ -126,3 +126,5 @@ Sníh 1,20 kN/m², údržba 0,40 kN/m² a vítr 0,65 kN/m² jsou **ilustrační 
 Mimo rozsah jsou projekt pro povolení/provedení, certifikace pasivního domu, PENB/PHPP, hydrotermální simulace, konkrétní lokalita a geologie, únosnost a sedání základů, rozměry patů a výztuž, návrh spojů a kotvení, odborný podpis a obecná webová statická kalkulačka.
 
 Další fáze vyžaduje pozemek a místní zatížení, geotechnický průzkum, výrobkové parametry, skutečné ztužující stěny a spoje, vlhkostní a požární posouzení, optimalizaci dispozice a odbornou projektovou kontrolu.
+
+Vaše připomínky?
