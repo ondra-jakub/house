@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JIH 140 — koncept přízemního rodinného domu se třemi ložnicemi, garáží a velkou jižní terasou na pozemku 30 × 40 m." />
+    <meta name="theme-color" content="#f4f1e9" />
+    <title>JIH 140 — Domov otočený za sluncem</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}
+    </script>
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Přejít na obsah</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#uvod" aria-label="JIH 140 — na začátek">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M5 18.5 20 7l15 11.5V34H5Z" />
+          <path d="M13 34V21h14v13M20 7v27" />
+        </svg>
+        <span class="brand-name">JIH<span>.</span></span>
+        <span class="brand-subtitle">architektura<br />domova</span>
+      </a>
+
+      <div class="mode-switch" role="group" aria-label="Režim stránky">
+        <button type="button" data-set-mode="prezentace" aria-pressed="true">Prezentace</button>
+        <button type="button" data-set-mode="technika" aria-pressed="false">Technika</button>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Otevřít navigaci" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Hlavní navigace">
+        <a href="#koncept">Koncept</a>
+        <a href="#pudorys">Půdorys</a>
+        <a href="#materialy">Materiály</a>
+        <a href="#pozemek">Pozemek</a>
+      </nav>
+
+      <button class="header-action" type="button" data-print>
+        <span>Uložit koncept</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9" /></svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <div id="presentation-mode" data-mode-panel="prezentace">
+      <section class="hero" id="uvod" aria-labelledby="hero-title">
+        <div class="hero-grid page-shell">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span>Přízemní rodinný dům · 4+kk</p>
+            <h1 id="hero-title">Domov otočený<br /><em>za sluncem.</em></h1>
+            <p class="hero-intro">Tři ložnice, jeden společný prostor a terasa, která ho nechá přerůst do zahrady. Moderní dům pro čtyři — s dřevem, světlem a místem pro každý den.</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#pudorys">Prozkoumat půdorys<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5" /></svg></a>
+              <a class="text-link" href="#koncept">Příběh domu<span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="plot-note">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="3" width="20" height="26" rx="1" /><path d="M11 9h10M11 14h10M11 19h6" /></svg>
+              <div><span>Rovinatý pozemek</span><strong>30 × 40 m <small>/ 1 200 m²</small></strong></div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Architektonická ilustrace domu od jihu">
+            <div class="visual-topline"><span>Koncepční studie · 01</span><span>Orientace: jih</span></div>
+            <svg class="house-illustration" viewBox="0 0 760 680" role="img" aria-labelledby="house-illustration-title">
+              <title id="house-illustration-title">Moderní přízemní dům s plochou střechou, dřevěným obkladem a proskleným jižním průčelím</title>
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6e8df" /><stop offset="1" stop-color="#dfe3d6" /></linearGradient>
+                <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9bbb5" /><stop offset="0.52" stop-color="#6f8780" /><stop offset="1" stop-color="#3c514a" /></linearGradient>
+                <linearGradient id="glass-light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dce1d7" stop-opacity=".65" /><stop offset="1" stop-color="#a7b7ae" stop-opacity="0" /></linearGradient>
+                <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#aa7651" /><stop offset=".5" stop-color="#c49368" /><stop offset="1" stop-color="#a97450" /></linearGradient>
+                <pattern id="wood-slats" width="13" height="10" patternUnits="userSpaceOnUse"><rect width="13" height="10" fill="url(#wood)" /><path d="M1 0v10" stroke="#765139" stroke-opacity=".38" /><path d="M3 0v10" stroke="#e1b78f" stroke-opacity=".35" /></pattern>
+                <pattern id="deck" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(26)"><rect width="18" height="18" fill="#c5b49d" /><path d="M0 0v18" stroke="#aa987f" stroke-width="1" /></pattern>
+                <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#243128" flood-opacity=".18" /></filter>
+                <filter id="tree-shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#445044" flood-opacity=".12" /></filter>
+              </defs>
+
+              <rect width="760" height="680" fill="url(#sky)" />
+              <circle cx="594" cy="132" r="62" fill="#e8d6a7" opacity=".86" />
+              <circle cx="594" cy="132" r="82" fill="none" stroke="#eef0e8" stroke-width="1" />
+
+              <g opacity=".55" fill="#a7b39c" filter="url(#tree-shadow)">
+                <path d="M52 411c-21-42 1-86 34-91-10-40 16-76 50-65 29-42 84-11 72 30 42 8 46 66 13 86 18 39-12 72-48 59-25 37-80 25-82-10-16 13-29 9-39-9Z" />
+                <path d="M635 407c-17-34-2-68 23-77-12-37 20-64 46-48 30-23 62 7 49 35 29 19 20 60-8 67 6 42-45 57-66 30-18 19-37 15-44-7Z" />
+              </g>
+              <g stroke="#75806d" stroke-width="5" stroke-linecap="round" opacity=".55"><path d="M133 304v201m0-107-37-44m37 83 48-61M694 337v154m0-80-31-34" /></g>
+
+              <path d="M0 500c147-33 245-19 354 4 125 26 255-5 406-12v188H0Z" fill="#bac5ac" />
+              <path d="M0 558c152-34 285 13 402 1 132-14 223-43 358-19v140H0Z" fill="#aab99d" />
+              <path d="m105 512 523-3 94 67-556 7Z" fill="url(#deck)" />
+              <path d="m166 583 556-7-18 13-522 8Z" fill="#9c8b76" opacity=".55" />
+
+              <g filter="url(#soft-shadow)">
+                <path d="m70 372 156-3 39 27-159 4Z" fill="#37423a" />
+                <path d="M106 400h159v108H106Z" fill="#d7d0c2" />
+                <path d="M120 413h125v95H120Z" fill="#b8b5aa" />
+                <g stroke="#9b9d94" stroke-width="2"><path d="M120 430h125M120 448h125M120 466h125M120 484h125" /></g>
+
+                <path d="m204 333 445-4 58 39-459 5Z" fill="#3b443d" />
+                <path d="m204 333 44 40v14l-44-40Z" fill="#29342d" />
+                <path d="M248 373h459v-18l-459-5Z" fill="#2d3831" />
+                <path d="m649 329 58 39v-18l-58-39Z" fill="#202c25" />
+                <path d="M248 355h459v160H248Z" fill="#e2dbce" />
+                <path d="M707 355v160l31-28V333Z" fill="#bcb9ae" />
+
+                <rect x="258" y="370" width="115" height="145" fill="url(#wood-slats)" />
+                <rect x="385" y="370" width="304" height="145" fill="url(#glass)" />
+                <rect x="385" y="370" width="304" height="145" fill="url(#glass-light)" />
+                <g fill="#25382f"><rect x="381" y="365" width="7" height="154" /><rect x="473" y="370" width="5" height="145" /><rect x="570" y="370" width="5" height="145" /><rect x="685" y="366" width="7" height="153" /><rect x="382" y="365" width="310" height="7" /></g>
+                <g stroke="#d8e1d9" stroke-opacity=".26" stroke-width="2"><path d="m398 381 65 116M488 376l66 119M590 380l65 108" /></g>
+                <path d="M399 374h64v139h-64c14-43 11-91 0-139Z" fill="#e6e0d2" opacity=".54" />
+                <path d="M583 374h89v139h-89c-12-48-12-93 0-139Z" fill="#d9ded4" opacity=".22" />
+                <g fill="#273c32" opacity=".7"><path d="M504 485h67v27h-67Z" /><path d="M512 466h49c9 0 15 7 15 16v10h-75v-15c0-6 5-11 11-11Z" /><path d="M511 510v8m52-8v8" stroke="#273c32" stroke-width="4" /></g>
+                <path d="M248 515h459l31-28H279Z" fill="#7e7669" opacity=".38" />
+              </g>
+
+              <g stroke="#56634f" stroke-width="3" fill="none" stroke-linecap="round">
+                <path d="M305 534v34m83-36v34m-96-35h110l-11 12h-88Z" fill="#8a775f" stroke="#8a775f" />
+                <path d="M318 550v28m-11-17h22M375 549v29m-11-17h22" />
+              </g>
+              <g fill="#6f8064"><path d="M270 540c-18-23-2-40 14-24 2-27 28-23 25 1 19-10 28 13 10 26Z" /><path d="M653 534c-14-28 9-41 20-19 10-26 36-10 25 12 24-2 24 25 2 28h-48Z" /></g>
+              <g fill="#b18e68"><path d="M275 537h39l-5 30h-29Z" /><path d="M655 535h43l-6 31h-31Z" /></g>
+
+              <g fill="none" stroke="#718264" stroke-width="2" stroke-linecap="round" opacity=".85">
+                <path d="M55 613q3-27 8-39m-5 24-10-12m13 4 12-14M92 630q1-24 8-38m-6 19-10-10M721 613q-2-26-10-41m7 22 13-13M676 635q2-20 9-33m-7 17-10-8M137 639q2-18 7-29" />
+              </g>
+              <g class="illustration-notes" font-family="Arial, sans-serif" fill="#536052">
+                <text x="35" y="48" font-size="10" letter-spacing="2.4">MODERNÍ / ÚTULNÝ / PŘÍZEMNÍ</text>
+                <text x="673" y="641" font-size="9" letter-spacing="1.6">PŮDORYSNÁ STUDIE</text>
+              </g>
+              <path d="M35 64h102" stroke="#83907d" stroke-width="1" />
+            </svg>
+            <div class="visual-caption"><div><span class="caption-index">01</span><strong>Jižní průčelí</strong></div><span>Dům otevřený zahradě</span></div>
+          </div>
+        </div>
+
+        <div class="hero-stats page-shell" aria-label="Základní parametry domu">
+          <div class="stat"><strong><span data-summary="residential-value">147,7</span><span> m²</span></strong><p>čisté místnosti domu<small>bez garáže a terasy</small></p></div>
+          <div class="stat"><strong>3</strong><p>ložnice<small>2 dětské pokoje + hlavní ložnice</small></p></div>
+          <div class="stat"><strong><span data-summary="garage-value">18,3</span><span> m²</span></strong><p>garáž<small>s vjezdem od severu</small></p></div>
+          <div class="stat"><strong>44<span> m²</span></strong><p>jižní terasa<small>11 × 4 m s posezením</small></p></div>
+        </div>
+      </section>
+
+      <section class="concept section-pad" id="koncept" aria-labelledby="concept-title">
+        <div class="page-shell section-grid">
+          <div class="section-index"><span>01</span><p>Koncept</p></div>
+          <div class="section-main">
+            <p class="eyebrow">Jednoduchý organigram domu</p>
+            <h2 id="concept-title">Vstup od severu.<br />Život <em>na jih.</em></h2>
+            <div class="concept-intro">
+              <p>Garáž, technické zázemí a vstup tvoří severní zádí domu. Za ním se otevírá společný prostor s kuchyní, jídelnou a obývacím pokojem — celý orientovaný přes terasu do zahrady.</p>
+              <p>Tři ložnice jsou soustředěny do klidného východního křídla. Hlavní ložnice má vlastní šatnu a koupelnu; dětské pokoje sdílí velkou koupelnu poblíž společné chodby.</p>
+            </div>
+            <div class="principles">
+              <article class="principle">
+                <div class="principle-icon"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="15" /><path d="M22 3v8m0 22v8M3 22h8m22 0h8" /><circle cx="22" cy="22" r="4" /></svg></div>
+                <span>01 / Světlo</span><h3>Slunce po celý den</h3><p>Jih pro společný život, východ pro probuzení v ložnicích a západ pro dlouhé večery na terase.</p>
+              </article>
+              <article class="principle">
+                <div class="principle-icon"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M5 36V14l17-9 17 9v22Z" /><path d="M5 25h34M22 5v31" /></svg></div>
+                <span>02 / Klid</span><h3>Společně i odděleně</h3><p>Otevřený obytný prostor a samostatné ložnicové křídlo oddělují hluk dne od nočního klidu.</p>
+              </article>
+              <article class="principle">
+                <div class="principle-icon"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M7 37h30M11 37V19h22v18M7 19h30L22 6Z" /><path d="M17 37V25h10v12" /></svg></div>
+                <span>03 / Praktičnost</span><h3>Všechno po ruce</h3><p>Garáž navazuje na zádveří, spíž sousedí s kuchyní a prádelna je součástí technického zázemí.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plan-section section-pad" id="pudorys" aria-labelledby="plan-title">
+        <div class="page-shell">
+          <div class="plan-heading">
+            <div><p class="eyebrow eyebrow-light">02 / Dispozice</p><h2 id="plan-title">Všechno na<br /><em>jedné úrovni.</em></h2></div>
+            <p>Vyberte místnost v půdorysu a objevte, jak jednotlivé části domu spolupracují. Plochy a čisté rozměry jsou vypočtené ze společného modelu po odečtení koncepcí navržených konstrukcí.</p>
+          </div>
+
+          <div class="plan-workspace">
+            <div class="plan-canvas">
+              <div class="plan-canvas-top"><span>PŮDORYS 1. NP</span><span>Společný model · měřítko pouze pro kalibrovaný tisk</span></div>
+              <div class="generated-plan drawing-scroll" data-presentation-plan></div>
+              <noscript><p>Plochy místností: čisté místnosti domu 147,7 m², garáž 18,3 m², terasa 44,0 m². Pro interaktivní půdorys spusťte JavaScript.</p></noscript>
+              <svg class="floorplan legacy-floorplan" hidden viewBox="0 0 900 770" role="img" aria-labelledby="floorplan-title floorplan-desc">
+                <title id="floorplan-title">Interaktivní půdorys přízemního domu JIH 140</title>
+                <desc id="floorplan-desc">Severní strana s garáží a vstupem, východní ložnicové křídlo a jižní obytný prostor s terasou. Místnosti lze vybrat kliknutím.</desc>
+                <defs>
+                  <pattern id="terrace-boards" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#d9c6aa" /><path d="M0 0h12" stroke="#b9a184" stroke-width="1" /></pattern>
+                  <pattern id="garage-floor" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#d0d2cb" /><path d="M0 0v14" stroke="#c3c6bf" /></pattern>
+                </defs>
+
+                <g class="plan-dimensions" fill="none" stroke="currentColor" stroke-width="1">
+                  <path d="M110 92V67m665 25V67M110 77h665M110 72v10m665-10v10" />
+                  <path d="M72 130H47m25 418H47M57 130v418M52 130h10M52 548h10" />
+                  <path d="M110 722v-18m418 18v-18M110 714h418M110 709v10m418-10v10" />
+                </g>
+                <g class="dimension-labels"><text x="442" y="59">17,50 m</text><text x="37" y="345" transform="rotate(-90 37 345)">11,00 m</text><text x="319" y="744">terasa 11,00 × 4,00 m</text></g>
+
+                <g class="north-arrow" transform="translate(830 135)"><text x="0" y="-30">S</text><path d="M0-20 10 8 0 3-10 8Z" /><path d="M0 3v34" /></g>
+                <text class="orientation-label" x="830" y="210">SEVER</text>
+
+                <g class="room room-terrace" data-room="terrace" tabindex="0" role="button" aria-label="Jižní terasa, 44 metrů čtverečních">
+                  <rect class="room-shape" x="110" y="548" width="418" height="152" fill="url(#terrace-boards)" />
+                  <text class="room-name" x="314" y="663">JIŽNÍ TERASA</text><text class="room-area" x="314" y="680">44,0 m²</text>
+                </g>
+
+                <g class="room room-social is-selected" data-room="living" tabindex="0" role="button" aria-label="Obývací pokoj s kuchyní a jídelnou, 49,2 metru čtverečního">
+                  <path class="room-shape" d="M110 350.4H505.2V548H110Z" />
+                  <text class="room-name" x="309" y="440">OBÝVACÍ POKOJ</text><text class="room-name room-subname" x="309" y="457">S KUCHYNÍ A JÍDELNOU</text><text class="room-area" x="309" y="477">49,2 m²</text>
+                </g>
+                <g class="room room-garage" data-room="garage" tabindex="0" role="button" aria-label="Garáž, 20,8 metru čtverečního">
+                  <rect class="room-shape" x="110" y="130" width="144.4" height="220.4" fill="url(#garage-floor)" />
+                  <text class="room-name" x="182" y="190">GARÁŽ</text><text class="room-area" x="182" y="208">20,8 m²</text>
+                </g>
+                <g class="room room-service" data-room="entry" tabindex="0" role="button" aria-label="Vstup a zádveří, 6,4 metru čtverečního">
+                  <rect class="room-shape" x="254.4" y="130" width="129.2" height="106.4" />
+                  <text class="room-name" x="319" y="175">VSTUP</text><text class="room-name room-subname" x="319" y="190">A ZÁDVEŘÍ</text><text class="room-area" x="319" y="209">6,4 m²</text>
+                </g>
+                <g class="room room-service" data-room="utility" tabindex="0" role="button" aria-label="Technická místnost, 5,4 metru čtverečního">
+                  <rect class="room-shape" x="254.4" y="236.4" width="64.6" height="114" />
+                  <text class="room-name room-small" x="287" y="279">TECH.</text><text class="room-area" x="287" y="296">5,4 m²</text>
+                </g>
+                <g class="room room-service" data-room="pantry" tabindex="0" role="button" aria-label="Spíž, 3 metry čtvereční">
+                  <rect class="room-shape" x="319" y="236.4" width="64.6" height="114" />
+                  <text class="room-name room-small" x="352" y="279">SPÍŽ</text><text class="room-area" x="352" y="296">3,0 m²</text>
+                </g>
+                <g class="room room-service" data-room="bathroom" tabindex="0" role="button" aria-label="Hlavní koupelna, 7,4 metru čtverečního">
+                  <rect class="room-shape" x="383.6" y="130" width="121.6" height="106.4" />
+                  <text class="room-name" x="444" y="177">KOUPELNA</text><text class="room-area" x="444" y="196">7,4 m²</text>
+                </g>
+                <g class="room room-service" data-room="wc" tabindex="0" role="button" aria-label="Samostatná toaleta, 1,8 metru čtverečního">
+                  <rect class="room-shape" x="383.6" y="236.4" width="60.8" height="60.8" />
+                  <text class="room-name room-small" x="414" y="260">WC</text><text class="room-area" x="414" y="277">1,8</text>
+                </g>
+                <g class="room room-hall" data-room="hall" tabindex="0" role="button" aria-label="Chodba s vestavěnými skříněmi, 8,8 metru čtverečního">
+                  <path class="room-shape" d="M444.4 236.4H505.2V350.4H383.6V297.2H444.4Z M505.2 236.4H607.8V388.4H505.2Z" />
+                  <text class="room-name room-small" x="550" y="303">CHODBA</text><text class="room-area" x="550" y="321">8,8 m²</text>
+                </g>
+                <g class="room room-service" data-room="laundry" tabindex="0" role="button" aria-label="Prádelna, 4,1 metru čtverečního">
+                  <rect class="room-shape" x="505.2" y="130" width="102.6" height="106.4" />
+                  <text class="room-name" x="556" y="176">PRÁDELNA</text><text class="room-area" x="556" y="195">4,1 m²</text>
+                </g>
+                <g class="room room-private" data-room="child-one" tabindex="0" role="button" aria-label="První dětský pokoj, 13,2 metru čtverečního">
+                  <rect class="room-shape" x="607.8" y="130" width="167.2" height="129.2" />
+                  <text class="room-name" x="691" y="177">DĚTSKÝ POKOJ</text><text class="room-area" x="691" y="196">13,2 m²</text>
+                </g>
+                <g class="room room-private" data-room="child-two" tabindex="0" role="button" aria-label="Druhý dětský pokoj, 13 metrů čtverečních">
+                  <rect class="room-shape" x="607.8" y="259.2" width="167.2" height="129.2" />
+                  <text class="room-name" x="691" y="306">DĚTSKÝ POKOJ</text><text class="room-area" x="691" y="325">13,0 m²</text>
+                </g>
+                <g class="room room-private" data-room="master" tabindex="0" role="button" aria-label="Hlavní ložnice, 16,4 metru čtverečního">
+                  <rect class="room-shape" x="607.8" y="388.4" width="167.2" height="159.6" />
+                  <text class="room-name" x="691" y="421">HLAVNÍ LOŽNICE</text><text class="room-area" x="691" y="440">16,4 m²</text>
+                </g>
+                <g class="room room-private-service" data-room="wardrobe" tabindex="0" role="button" aria-label="Šatna hlavní ložnice, 4,2 metru čtverečního">
+                  <rect class="room-shape" x="505.2" y="388.4" width="102.6" height="76" />
+                  <text class="room-name room-small" x="556" y="419">ŠATNA</text><text class="room-area" x="556" y="437">4,2 m²</text>
+                </g>
+                <g class="room room-private-service" data-room="ensuite" tabindex="0" role="button" aria-label="Koupelna hlavní ložnice, 4,1 metru čtverečního">
+                  <rect class="room-shape" x="505.2" y="464.4" width="102.6" height="83.6" />
+                  <text class="room-name room-small" x="556" y="498">KOUPELNA</text><text class="room-area" x="556" y="516">4,1 m²</text>
+                </g>
+
+                <g class="plan-furniture" fill="none" stroke="currentColor" stroke-width="1.25">
+                  <g transform="translate(137 228)"><rect width="90" height="105" rx="24" /><rect x="9" y="17" width="72" height="67" rx="16" /><path d="M9 39h72M9 66h72M20 4v13m50-13v13M20 86v14m50-14v14" /></g>
+                  <path d="M142 130v12h86v-12M147 135h76M151 139h68" stroke-width="2" />
+                  <path d="M297 130h42v6h-42ZM297 136v36a36 36 0 0 0 36-36" />
+                  <path d="M266 223h104M266 229h104" stroke-dasharray="4 3" />
+                  <rect x="266" y="248" width="40" height="28" rx="2" /><circle cx="278" cy="262" r="6" /><circle cx="295" cy="262" r="6" />
+                  <path d="M330 247h42m-42 10h42m-42 10h42m-42 10h42m-42 10h42" />
+                  <rect x="393" y="143" width="74" height="35" rx="8" /><path d="M399 149h62v22h-62Z" /><rect x="476" y="145" width="19" height="19" rx="5" /><circle cx="485.5" cy="154.5" r="6" />
+                  <rect x="519" y="145" width="31" height="31" rx="2" /><circle cx="534.5" cy="160.5" r="11" /><rect x="559" y="145" width="31" height="31" rx="2" /><circle cx="574.5" cy="160.5" r="11" />
+                  <path d="M619 145h58m-58 10h58m-58 10h58" stroke-dasharray="4 3" />
+                  <rect x="619" y="211" width="48" height="33" rx="3" /><path d="M619 218h48" /><rect x="721" y="145" width="40" height="18" rx="2" /><circle cx="741" cy="154" r="4" />
+                  <rect x="619" y="340" width="48" height="33" rx="3" /><path d="M619 347h48" /><rect x="721" y="274" width="40" height="18" rx="2" /><circle cx="741" cy="283" r="4" />
+                  <rect x="652" y="466" width="79" height="66" rx="3" /><rect x="657" y="471" width="32" height="17" rx="5" /><rect x="694" y="471" width="32" height="17" rx="5" /><path d="M652 492h79" />
+                  <path d="M517 400h80m-80 10h80m-80 10h80m-80 10h80" stroke-dasharray="4 3" />
+                  <rect x="516" y="477" width="52" height="24" rx="7" /><circle cx="585" cy="481" r="10" /><path d="M585 471v20m-10-10h20" />
+                  <path d="M126 363h176v28H126ZM302 363h54v28h-54" /><path d="M126 391h176M139 363v28m28-28v28m28-28v28m28-28v28m28-28v28m28-28v28" opacity=".5" />
+                  <rect x="226" y="402" width="123" height="31" rx="2" /><path d="M240 409h95m-95 9h95m-95 9h95" opacity=".45" />
+                  <rect x="374" y="371" width="72" height="43" rx="3" /><ellipse cx="410" cy="392" rx="25" ry="14" /><path d="M368 374v-12m16 12v-12m52 12v-12m16 12v-12M368 411v12m16-12v12m52-12v12m16-12v12" />
+                  <path d="M139 472h85v49h-85Zm-11 10h11v30h-11Zm96 0h11v30h-11ZM150 461h63v11h-63Z" /><rect x="248" y="484" width="49" height="28" rx="4" /><path d="M158 491h46" />
+                  <path d="M467 514c-17-20 2-31 11-13 7-21 27-9 19 8 18 2 12 22-4 20h-27Z" /><path d="M470 526h22l-3 15h-16Z" />
+                  <rect x="157" y="575" width="133" height="49" rx="3" /><path d="M169 575v-17m109 17v-17M169 624v17m109-17v17M157 586h-19v27h19m133-27h19v27h-19" />
+                  <rect x="358" y="577" width="62" height="31" rx="14" /><rect x="438" y="577" width="62" height="31" rx="14" /><path d="M367 608v20m44-20v20m36-20v20m44-20v20" />
+                </g>
+
+                <g class="plan-windows" fill="none" stroke="#f8f5ed" stroke-width="5">
+                  <path d="M135 548h164M322 548h145M633 548h111M775 157v72M775 286v72M775 420v92M130 350v110" />
+                </g>
+                <g class="plan-window-frames" fill="none" stroke="#52685b" stroke-width="1.4">
+                  <path d="M135 544v8m164-8v8M322 544v8m145-8v8M633 544v8m111-8v8M771 157h8m-8 72h8M771 286h8m-8 72h8M771 420h8m-8 92h8M126 350h8m-8 110h8" />
+                </g>
+                <rect class="outer-wall" x="110" y="130" width="665" height="418" fill="none" />
+                <g class="entrance-labels"><text x="303" y="112">HLAVNÍ VSTUP</text><text x="140" y="112">VJEZD</text><text x="114" y="580">JIH</text></g>
+              </svg>
+              <div class="plan-legend"><span><i class="legend-social"></i>Společenská část</span><span><i class="legend-private"></i>Soukromá část</span><span><i class="legend-service"></i>Zázemí</span></div>
+            </div>
+
+            <aside class="room-detail" aria-live="polite">
+              <div class="room-detail-top"><p class="eyebrow">Vybraná místnost</p><span id="room-number">01 / 15</span></div>
+              <div class="room-detail-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 40V16L24 6l17 10v24Z" /><path d="M15 40V25h18v15M24 6v34" /></svg></div>
+              <h3 id="room-name">Obývací pokoj<br />s kuchyní a jídelnou</h3>
+              <div class="selected-area"><strong id="room-area">47,9</strong><span>m²</span></div>
+              <p id="room-description">Srdce domu spojuje vaření, stolování i odpočinek. Velké posuvné dveře zřetelně propojují interiér s jižní terasou.</p>
+              <ul class="room-features" id="room-features"><li>Kuchyňský ostrůvek s posezením</li><li>Jídelní stůl pro 6–8 osob</li><li>Přímý vstup na jižní terasu</li></ul>
+              <div class="room-orientation"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="6" /><path d="M14 1v5m0 16v5M1 14h5m16 0h5M5 5l3.5 3.5m11 11L23 23M23 5l-3.5 3.5m-11 11L5 23" /></svg><div><span>Umístění a světlo</span><p id="room-orientation">Jih a západ · přímé odpolední slunce</p></div></div>
+              <p class="detail-hint"><span aria-hidden="true">↖</span> Kliknutím na další místnost zobrazíte podrobnosti.</p>
+            </aside>
+          </div>
+          <div class="plan-footnote"><span>4+kk</span><p><strong data-summary="residential">147,7 m²</strong> čisté místnosti domu · <strong data-summary="garage">18,3 m²</strong> garáž · <strong>44,0 m²</strong> terasa</p><small>Vypočteno z polygonů po odečtení konstrukcí; koncept pro další projektové ověření.</small></div>
+        </div>
+      </section>
+
+      <section class="materials section-pad" id="materialy" aria-labelledby="materials-title">
+        <div class="page-shell section-grid">
+          <div class="section-index"><span>03</span><p>Materiály</p></div>
+          <div class="section-main">
+            <div class="materials-heading"><div><p class="eyebrow">Moderní formou, domovem na dotek</p><h2 id="materials-title">Klidná paleta.<br /><em>Přirozené detaily.</em></h2></div><p>Jednoduchá hmota s plochou střechou dostává teplo od dřeva, jemné omítky a textilu. Odolné materiály stárnou přirozeně a nechávají vyniknout zahradě.</p></div>
+            <div class="material-grid">
+              <article class="material-card">
+                <div class="material-swatch swatch-wood"><span>01</span><div class="swatch-line"></div></div>
+                <div class="material-info"><h3>Dub / přirozený</h3><p>Vertikální obklad, dubová podlaha a nábytek v teplém medovém tónu.</p><span>TEPLO · TEXTURA · DOMOV</span></div>
+              </article>
+              <article class="material-card">
+                <div class="material-swatch swatch-plaster"><span>02</span><div class="swatch-line"></div></div>
+                <div class="material-info"><h3>Omítka / písková</h3><p>Jemná vápenná omítka v přírodním odstínu, který změkčuje hranatou hmotu.</p><span>SVĚTLO · KLID · ČISTOTA</span></div>
+              </article>
+              <article class="material-card">
+                <div class="material-swatch swatch-metal"><span>03</span><div class="swatch-line"></div></div>
+                <div class="material-info"><h3>Hliník / grafitový</h3><p>Velkoformátová okna a střešní atika v tenkém, nadčasovém kontrastu.</p><span>PŘESNOST · ODOLNOST · LINIE</span></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="comfort-band" aria-label="Navržené technologie a komfort">
+        <div class="page-shell comfort-grid">
+          <div class="comfort-intro"><span>KOMFORT / 04</span><p>Nenápadné technologie.<br />Příjemný domov po celý rok.</p></div>
+          <div class="comfort-item"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3v34M5 11l30 18M5 29l30-18M14 6l6 5 6-5M14 34l6-5 6 5M5 18l7-1-1-7M35 22l-7 1 1 7M5 22l7 1-1 7M35 18l-7-1 1-7" /></svg><div><strong>Tepelné čerpadlo</strong><span>úsporné vytápění i chlazení</span></div></div>
+          <div class="comfort-item"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 15h20c8 0 8-11 1-11-4 0-6 3-6 5M4 21h29c7 0 7 11 0 11-4 0-6-3-6-5M4 27h13" /></svg><div><strong>Rekuperace</strong><span>čerstvý vzduch bez zbytečných ztrát</span></div></div>
+          <div class="comfort-item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="7" /><path d="M20 2v7m0 22v7M2 20h7m22 0h7M7 7l5 5m16 16 5 5M33 7l-5 5M12 28l-5 5" /></svg><div><strong>Příprava pro FV</strong><span>jižní střecha a stínění oken</span></div></div>
+        </div>
+      </section>
+
+      <section class="site-section section-pad" id="pozemek" aria-labelledby="site-title">
+        <div class="page-shell site-grid">
+          <div class="site-plan-wrap">
+            <div class="site-plan-top"><span>POZEMEK / SITUACE</span><span>30 × 40 m</span></div>
+            <svg class="site-plan" viewBox="0 0 470 560" role="img" aria-labelledby="site-plan-title">
+              <title id="site-plan-title">Schematické umístění domu v severní polovině pozemku s jižní zahradou</title>
+              <defs><pattern id="lawn" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#dce2d3" /><path d="m4 14 2-5 2 5m4-7 2-4 1 5" stroke="#bdcbb3" stroke-width=".8" fill="none" /></pattern><pattern id="site-deck" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#ccb79b" /><path d="M0 0h10" stroke="#b19b7e" /></pattern></defs>
+              <rect x="70" y="45" width="330" height="440" fill="url(#lawn)" stroke="#3f5746" stroke-width="2" />
+              <path d="M108 45h66v129h-66Z" fill="#c8c8bd" /><path d="M122 45h38v129h-38Z" fill="#b6b8ae" /><path d="M141 45v129" stroke="#e7e7df" stroke-width="2" stroke-dasharray="8 7" />
+              <g transform="translate(120 110)"><rect width="192.5" height="121" fill="#eee9dc" stroke="#354a3b" stroke-width="3" /><rect width="41.8" height="63.8" fill="#bfc3ba" stroke="#536358" /><rect x="144.1" y="0" width="48.4" height="121" fill="#c9d2bd" /><rect y="63.8" width="114.4" height="57.2" fill="#dbc2a5" /><text x="60" y="96" class="site-house-label">DŮM JIH 140</text><text x="21" y="32" class="site-small-label" transform="rotate(-90 21 32)">GARÁŽ</text></g>
+              <rect x="120" y="231" width="121" height="44" fill="url(#site-deck)" stroke="#a28b6d" /><text x="180.5" y="258" class="site-small-label">JIŽNÍ TERASA</text>
+              <path d="M100 318c45-27 101-14 128 12s70 34 132 12M102 415c73-37 131 36 242-5" fill="none" stroke="#c2cdb8" stroke-width="2" stroke-dasharray="5 5" />
+              <g fill="#9daf91" stroke="#6e8364"><circle cx="100" cy="365" r="26" /><circle cx="360" cy="350" r="31" /><circle cx="338" cy="449" r="25" /><circle cx="128" cy="445" r="19" /></g>
+              <g fill="#c2ccb8"><circle cx="93" cy="357" r="13" /><circle cx="350" cy="340" r="16" /><circle cx="330" cy="441" r="12" /></g>
+              <g stroke="#708168" stroke-width="3"><path d="M100 365v37M360 350v42M338 449v29M128 445v21" /></g>
+              <g class="site-labels"><text x="235" y="83">PŘÍJEZD / SEVER</text><text x="235" y="330">JIŽNÍ ZAHRADA</text><text x="235" y="349">souvislý prostor pro hru i odpočinek</text><text x="235" y="530">JIH</text></g>
+              <g class="site-dimensions" fill="none" stroke="#5f6b60"><path d="M70 25h330M70 20v10m330-10v10M45 45v440M40 45h10M40 485h10" /></g>
+              <g class="dimension-labels"><text x="235" y="17">30,00 m</text><text x="31" y="265" transform="rotate(-90 31 265)">40,00 m</text></g>
+              <g class="site-north" transform="translate(433 86)"><text y="-18">S</text><path d="M0-12 7 8 0 4-7 8Z" /><path d="M0 4v25" /></g>
+            </svg>
+            <div class="site-plan-bottom"><span>Schematická situace · M 1 : 250</span><span>1 200 m²</span></div>
+          </div>
+
+          <div class="site-copy">
+            <p class="eyebrow">04 / Pozemek</p>
+            <h2 id="site-title">Dům v severní polovině.<br /><em>Zahrada celá pro život.</em></h2>
+            <p class="site-lead">Na rovinatém pozemku dává smysl jednoduchá kompozice: příjezd a dům na severu, souvislá zahrada na jihu. Auta zůstávají u vstupu a výhled z obývacího pokoje patří zeleni.</p>
+            <div class="site-principles">
+              <div><span>01</span><section><h3>Krátký příjezd</h3><p>Garáž u severozápadního rohu omezuje vydlážděnou plochu a nechává zahradu bez aut.</p></section></div>
+              <div><span>02</span><section><h3>Maximální jižní zahrada</h3><p>Dům v severní polovině pozemku uvolňuje velkou, slunnou a snadno využitelnou zahradu.</p></section></div>
+              <div><span>03</span><section><h3>Přirozené soukromí</h3><p>Severní zádí s menšími okny chrání vstup; na jih se dům otevírá do vlastní zahrady.</p></section></div>
+            </div>
+            <div class="site-note"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="11" /><path d="M14 8v7m0 4v1" /></svg><p>Přesné osazení je nutné upravit podle skutečné orientace pozemku, příjezdu, sousedních staveb, ochraných pásem a místních stavebních předpisů.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing section-pad" aria-labelledby="closing-title">
+        <div class="page-shell closing-inner">
+          <p class="eyebrow eyebrow-light">JIH 140 / Váš budoucí domov</p>
+          <h2 id="closing-title">Místo pro váš<br /><em>společný příběh.</em></h2>
+          <p>Koncept spojuje přehlednou dispozici, přirozené materiály a silný vztah k zahradě. Dalším krokem je jeho přizpůsobení konkrétnímu místu a vašim každodenním rituálům.</p>
+          <div class="closing-actions"><button class="button button-light" type="button" data-print>Uložit nebo vytisknout koncept<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M6 5h9v9" /></svg></button><a class="text-link text-link-light" href="#uvod">Zpět na začátek<span aria-hidden="true">↑</span></a></div>
+        </div>
+      </section>
+      </div>
+
+      <div id="technical-mode" data-mode-panel="technika" hidden>
+        <section class="tech-hero" aria-labelledby="technical-title">
+          <div class="page-shell tech-hero-grid">
+            <div>
+              <p class="eyebrow">JIH 140 / Technický koncept</p>
+              <h1 id="technical-title">Jeden model.<br /><em>Ověřitelné vazby.</em></h1>
+              <p>Rámová KVH dřevostavba, skladby, výkresy i referenční předdimenzování sdílejí stejná data. Jde o sladěný koncept, nikoli projekt pro povolení nebo provedení stavby.</p>
+            </div>
+            <div class="tech-summary" aria-label="Přepočtené plochy a výšky">
+              <div><strong data-summary="residential">147,7 m²</strong><span>čisté místnosti bez garáže</span></div>
+              <div><strong data-summary="built">192,5 m²</strong><span>zastavěná plocha 17,50 × 11,00 m</span></div>
+              <div><strong>2,70 m</strong><span>čistá výška obytných místností</span></div>
+              <div><strong>KVH / GL</strong><span>rám a lepené nosníky nad otvory</span></div>
+            </div>
+          </div>
+          <div class="page-shell tech-warning"><strong>Hranice platnosti:</strong> bez lokality a geotechnického průzkumu neposuzujeme základy ani způsobilost pro konkrétní stavbu. Energetickým cílem je nízkoenergetický dům, nikoli prohlášený pasivní standard.</div>
+          <div class="page-shell tech-actions"><button class="button button-dark" type="button" data-print>Vytisknout technický režim</button><span>Tisk obsahuje všechny výkresy a výpočty; 3D nahrazuje statická axonometrie.</span></div>
+        </section>
+
+        <section class="tech-section" id="technika-pudorys" aria-labelledby="tech-plan-title">
+          <div class="page-shell">
+            <p class="eyebrow">01 / Geometrie</p>
+            <h2 id="tech-plan-title">Půdorys s kótami<br /><em>a skutečnými konstrukcemi.</em></h2>
+            <p class="tech-lead">Plochy se počítají z čistých polygonů po odečtení konstrukcí. Vestavěné skříně nejsou samostatná plocha. Místnost lze vybrat ukazatelem nebo klávesami Enter a mezerník.</p>
+            <div class="drawing-card drawing-wide"><div class="drawing-scroll" data-technical-plan></div></div>
+            <div class="data-grid" id="area-summary-table"></div>
+            <div class="table-wrap" id="room-table"></div>
+            <div class="table-wrap" id="opening-table"></div>
+          </div>
+        </section>
+
+        <section class="tech-section tech-section-alt" id="technika-rezy" aria-labelledby="tech-elevations-title">
+          <div class="page-shell">
+            <p class="eyebrow">02 / Shoda pohledů</p>
+            <h2 id="tech-elevations-title">Čtyři bokorysy.<br /><em>Dva řezy.</em></h2>
+            <p class="tech-lead">Otvory, výšky a skladby pocházejí ze stejného modelu jako půdorys a 3D. Na úzké obrazovce lze výkresy horizontálně posouvat; podklady uvádějí také tabulkové hodnoty.</p>
+            <div class="drawing-grid">
+              <article class="drawing-card"><h3>Sever</h3><div class="drawing-scroll" data-elevation="north"></div></article>
+              <article class="drawing-card"><h3>Východ</h3><div class="drawing-scroll" data-elevation="east"></div></article>
+              <article class="drawing-card"><h3>Jih</h3><div class="drawing-scroll" data-elevation="south"></div></article>
+              <article class="drawing-card"><h3>Západ</h3><div class="drawing-scroll" data-elevation="west"></div></article>
+              <article class="drawing-card"><h3>Řez A–A / obytný prostor</h3><div class="drawing-scroll" data-section="A"></div></article>
+              <article class="drawing-card"><h3>Řez B–B / servisní a ložnicová část</h3><div class="drawing-scroll" data-section="B"></div></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="tech-section" id="technika-konstrukce" aria-labelledby="tech-construction-title">
+          <div class="page-shell">
+            <p class="eyebrow">03 / Skladby a tepelné mosty</p>
+            <h2 id="tech-construction-title">Konstrukce bez<br /><em>skrytých předpokladů.</em></h2>
+            <p class="tech-lead">Referenční skladby neobsahují fiktivního výrobce. Souvislá vzduchotěsná vrstva/parobrzda je součástí detailního návrhu, její vlhkostní a požární posouzení však tento koncept nenahrazuje.</p>
+            <div class="drawing-grid details-grid">
+              <article class="drawing-card"><h3>Obvodová stěna</h3><div class="drawing-scroll" data-detail="wall"></div></article>
+              <article class="drawing-card"><h3>Schematické napojení základu</h3><div class="drawing-scroll" data-detail="foundation"></div></article>
+              <article class="drawing-card"><h3>Atika a lehká teplá střecha</h3><div class="drawing-scroll" data-detail="parapet"></div></article>
+              <article class="drawing-card"><h3>Osazení okna</h3><div class="drawing-scroll" data-detail="window"></div></article>
+            </div>
+            <div id="thermal-results" class="calculation-list"></div>
+            <aside class="method-note"><h3>Spád a odvodnění střechy</h3><p>Střecha má koncepční spád 2 % k severním vpustím VP1 a VP2. Nouzový přepad NP1 je v jižní atice. Průměry, hydraulický výpočet, hydroizolační napojení a požární detaily navrhne další projektová fáze.</p></aside>
+            <aside class="method-note"><h3>Co výpočet U nedokazuje</h3><p>Součinitel prostupu tepla je oddělený od lineárních mostů Ψ, difuze a kondenzace, vzduchotěsnosti, požárního detailu a PENB. Neprokazuje bezpečný vlhkostní režim. Výrobkové údaje, korekce spojů, hydrotermální posouzení a celkovou energetickou bilanci je nutné doplnit v další projektové fázi.</p></aside>
+          </div>
+        </section>
+
+        <section class="tech-section tech-section-alt" id="technika-3d" aria-labelledby="tech-3d-title">
+          <div class="page-shell">
+            <p class="eyebrow">04 / Odkrytý model</p>
+            <h2 id="tech-3d-title">Prohlížení konstrukce<br /><em>v prostoru.</em></h2>
+            <p class="tech-lead">Three.js 0.180.0 je načteno z lokálních modulů až po spuštění. Bez CDN, automatické rotace, textur a editoru geometrie. Ostatní technický obsah funguje i bez WebGL.</p>
+            <div class="viewer-shell" data-viewer>
+              <div class="viewer-fallback" data-axo></div>
+              <div class="viewer-stage" data-viewer-stage></div>
+              <div class="viewer-start"><button class="button button-dark" type="button" data-start-3d>Spustit technické 3D</button><p>Po spuštění: tažení otáčí, kolečko nebo dvě prsty mění zoom. Klávesy: šipky rotace, Q/E náklon, +/− zoom, Home reset.</p></div>
+              <p class="viewer-status" data-viewer-status role="status"></p>
+            </div>
+            <div class="viewer-controls" data-viewer-controls hidden>
+              <div class="view-presets" role="group" aria-label="Přednastavené pohledy">
+                <button type="button" data-view="iso">Axonometrie</button><button type="button" data-view="north">Sever</button><button type="button" data-view="east">Východ</button><button type="button" data-view="south">Jih</button><button type="button" data-view="west">Západ</button><button type="button" data-viewer-reset>Reset</button>
+              </div>
+              <div class="layer-toggles" aria-label="Viditelné vrstvy">
+                <label><input type="checkbox" data-layer="roof" checked /> Střecha</label>
+                <label><input type="checkbox" data-layer="facade" checked /> Fasádní vrstvy</label>
+                <label><input type="checkbox" data-layer="envelope" checked /> Obálka</label>
+                <label><input type="checkbox" data-layer="rooms" checked /> Místnosti</label>
+              </div>
+            </div>
+            <noscript><p>Živé 3D vyžaduje JavaScript. Technické podklady lze použít i bez něj.</p></noscript>
+          </div>
+        </section>
+
+        <section class="tech-section" id="technika-statika" aria-labelledby="tech-structural-title">
+          <div class="page-shell">
+            <p class="eyebrow">05 / Referenční předdimenzování</p>
+            <h2 id="tech-structural-title">Zatěžovací dráhy.<br /><em>Sčitatelné mezivýsledky.</em></h2>
+            <div class="method-note structural-disclaimer"><strong>Modelový příklad — vyžaduje kontrolu oprávněným projektantem/statikem.</strong><p>Pevné vstupy dokumentují postup, nezpůsobilost konkrétní stavby. Použitá je referenční sada 1. generace Eurokódů; nová česká vydání norem z let 2024–2026 a národní dodatky musí projekt znovu ověřit.</p></div>
+            <div id="structural-results" class="calculation-list"></div>
+          </div>
+        </section>
+
+        <section class="tech-section tech-section-alt" aria-labelledby="tech-sources-title">
+          <div class="page-shell">
+            <p class="eyebrow">Zdroje a další fáze</p>
+            <h2 id="tech-sources-title">Co je ověřené.<br /><em>A co teprve bude.</em></h2>
+            <div class="source-grid">
+              <div><h3>Výpočetní východiska</h3><ul><li>ČSN EN ISO 6946:2020 / ISO 6946:2017, kombinovaná metoda a větrané vrstvy.</li><li>EN 1990:2002+A1, doporučené koeficienty kombinací; ČSN EN 1990 ed. 2 (2021) a ed. 3 (2024).</li><li>EN 1995-1-1:2004+A2, vzorce pro dřevo; ČSN EN 1995-1-1 ed. 2 (2026) k nové kontrole.</li><li>EN 338:2016 (C24), EN 14080:2013 (GL24h).</li></ul></div>
+              <div><h3>Veřejné reference</h3><ul><li><a href="https://www.iso.org/standard/65708.html">ISO 6946 — oficiální záznam</a></li><li><a href="https://www.phd.eng.br/wp-content/uploads/2015/12/en.1990.2002.pdf">EN 1990 — referenční text 1. generace</a></li><li><a href="https://www.phd.eng.br/wp-content/uploads/2015/12/en.1995.1.1.2004.pdf">EN 1995-1-1 — referenční text 1. generace</a></li><li><a href="./node_modules/three/LICENSE">Three.js — MIT licence</a></li></ul></div>
+              <div><h3>Další projektová fáze</h3><p>Pozemek a lokální zatížení, geotechnický průzkum, výrobkové parametry, spoje a ztužení, vlhkostní a požární posouzení, PENB/PHPP a odborné projektové posouzení.</p><p>Certifikace pasivního domu, hydrotermální simulace, posouzení základů a odborný podpis nejsou součástí tohoto konceptu.</p></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell"><a class="brand footer-brand" href="#uvod"><span class="brand-name">JIH<span>.</span></span><span class="brand-subtitle">architektura<br />domova</span></a><p>Koncepční architektonická studie. Nejedná se o projektovou dokumentaci pro stavební povolení ani provedení stavby.</p><span>Rodinný dům · 2026</span></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "jih-140-house-concept",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Interaktivní koncept přízemního rodinného domu JIH 140",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check script.js && node --check server.mjs && for file in src/*.js; do node --check \"$file\" || exit 1; done && node --test test/",
+    "test:browser": "PLAYWRIGHT_BROWSERS_PATH=./.playwright-browsers playwright test"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
